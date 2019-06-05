@@ -17,11 +17,14 @@ public class Manager {
 	 
 	private Integer idManager;
 	
+
 	private String nomeManager;
 	
 	private Set<Ticket> tickets = new HashSet<>();
 	
 	private Set<Dipendente> dipendenti = new HashSet<>();
+
+	private Set<Cliente> clienti = new HashSet<>();
 
  
 	@GeneratedValue
@@ -54,6 +57,15 @@ public class Manager {
 	public void setDipendenti(Set<Dipendente> dipendenti) {
 		this.dipendenti = dipendenti;
 	}
+	@JoinColumn(name="MANAGER_ID")
+	@OneToMany
+	public Set<Cliente> getClienti() {
+		return clienti;
+	}
+	public void setClienti(Set<Cliente> clienti) {
+		this.clienti = clienti;
+	}
+	
 	
 
 }

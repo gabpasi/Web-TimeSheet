@@ -1,10 +1,8 @@
 package com.timesheet.test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.sql.SQLException;
 
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
