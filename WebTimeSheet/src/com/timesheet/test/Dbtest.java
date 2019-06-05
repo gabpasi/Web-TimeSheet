@@ -19,10 +19,13 @@ class Dbtest {
 	
 	{
 		act= new ClassPathXmlApplicationContext("applicationContext.xml");
-		
 	}	
+	@Test
+	public void testManyToMany() {
+		
+	}
 	
-
+	
 	@Test
 	public void testDataSource() throws SQLException {
 		DataSource dataSource = act.getBean(DataSource.class);
